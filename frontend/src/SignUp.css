@@ -1,0 +1,26 @@
+.container{
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7of4QqaPtgjt4kUdf-OgdVlPJzQhWlGZAEA&s');
+}
+.password-requirements {
+    margin-top: 5px;
+  }
+  
+  .text-success {
+    color: green;
+  }
+  
+  .text-danger {
+    color: red;
+  }
+  .password-requirements {
+    margin-top: 5px;
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  
+  .position-absolute {
+    position: absolute;
+  }
+    

@@ -1,0 +1,51 @@
+/* Workouts.css */
+.workouts-content {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+
+  .workout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Adds space between elements */
+  }
+  
+  .time-container {
+    display: flex;
+    gap: 2rem; /* Space between start time and end time */
+  }
+  
+  .time-container label {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .workout-form label {
+    margin-bottom: 10px;
+  }
+  
+  .workout-form select,
+  .workout-form input {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .workout-form button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .workout-form button:hover {
+    background-color: #45a049;
+  }
+  

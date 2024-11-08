@@ -1,0 +1,64 @@
+.user-dashboard {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-icon {
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .profile-info {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc; /* Add bottom border for a clean separation */
+    background-color: grey;
+  }
+  
+  .navbar button {
+    background: none; /* Remove default button styling */
+    border: none;
+    margin-right: 20px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .navbar button.active {
+    border-bottom: 2px solid red; /* Add a red underline for active tab */
+    color: black; /* Keep text black for the active button */
+  }
+  
+  .navbar button:hover {
+    color: red; /* Optional: Add hover effect */
+  }
+  
+  
+  .content {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .statistics-content, .workouts-content {
+    font-size: 18px;
+  }
+  
