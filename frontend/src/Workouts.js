@@ -92,7 +92,7 @@ const Workouts = ({ username }) => {
   useEffect(() => {
     const fetchUserWeight = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/user/${username}`);
+        const response = await axios.get(`https://fitnesstracker-6y74.onrender.com/api/user/${username}`);
         setWeight(response.data.weight || 0); // Avoid undefined values
         setWeightUnit(response.data.weightUnit || 'kg');
       } catch (error) {
@@ -155,7 +155,7 @@ const handleSubmit = async (e) => {
 
         try {
             // Send the workout data to the server using POST
-            const response = await axios.post('http://localhost:5000/api/workout', workoutData);
+            const response = await axios.post('https://fitnesstracker-6y74.onrender.com/api/workout', workoutData);
             console.log('Workout saved:', response.data);
 
             // Clear the form after submission
