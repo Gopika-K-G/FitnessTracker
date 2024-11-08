@@ -20,7 +20,7 @@ function DietPlan({ username }) {
 
         if (term) {
             try {
-                const response = await axios.get(`http://localhost:5000/api/foods?searchTerm=${term}`);
+                const response = await axios.get(`https://fitnesstracker-6y74.onrender.com/api/foods?searchTerm=${term}`);
                 setSuggestions(response.data);
             } catch (err) {
                 console.error("Error fetching food suggestions:", err);
@@ -40,7 +40,7 @@ function DietPlan({ username }) {
 
     const fetchRecommendations = useCallback(async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/recommend-foods', {
+            const response = await axios.get('https://fitnesstracker-6y74.onrender.com/api/recommend-foods', {
                 params: { activeLevel, fitnessGoal }
             });
             setRecommendations(response.data);
