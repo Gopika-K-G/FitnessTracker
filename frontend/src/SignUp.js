@@ -70,7 +70,7 @@ const SignUp = () => {
 
     try {
       // Sending form data to the server to create a new user
-      const response = await axios.post('http://localhost:5000/api/signup', {
+      const response = await axios.post('https://fitnesstracker-6y74.onrender.com/api/signup', {
         fullName: formData.fullName,
         username: formData.username,
         email: formData.email,
