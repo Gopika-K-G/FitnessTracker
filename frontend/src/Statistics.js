@@ -17,7 +17,7 @@ const Statistics = ({ username }) => {
   useEffect(() => {
     const fetchWorkouts = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/statistics/${username}`); // Adjust API endpoint as necessary
+        const response = await axios.get(`https://fitnesstracker-6y74.onrender.com/api/statistics/${username}`); // Adjust API endpoint as necessary
         const workoutData = response.data;
         setWorkouts(workoutData);
 
