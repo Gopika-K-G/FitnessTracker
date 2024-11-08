@@ -21,7 +21,7 @@ const UserDashboard = () => {
     const fetchUserProfile = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:5000/api/profile/${username}`);
+        const response = await axios.get(`https://fitnesstracker-6y74.onrender.com/api/profile/${username}`);
         setUserProfile(response.data);
       } catch (error) {
         console.error('Error fetching user profile:', error);

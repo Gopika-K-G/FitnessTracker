@@ -84,7 +84,7 @@ const ProfileInfo = () => {
     };
 
     try {
-      const response = await axios.put('http://localhost:5000/api/updateProfile', updatedProfile); // Backend API call to update profile
+      const response = await axios.put('https://fitnesstracker-6y74.onrender.com/api/updateProfile', updatedProfile); // Backend API call to update profile
       console.log(response.data);
       alert('Profile updated successfully!');
     } catch (error) {
