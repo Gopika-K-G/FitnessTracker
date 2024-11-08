@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const response = await axios.post('https://fitnesstracker-6y74.onrender.com/api/login', {
         email,
         password,
       });
