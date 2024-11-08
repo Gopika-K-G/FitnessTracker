@@ -38,6 +38,33 @@ const Statistics = ({ username }) => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
+  if (workouts.length === 0) {
+    return (
+      <div className="statistics">
+        <h2>Workout Statistics</h2>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '300px', // Adjust height as needed
+            backgroundColor: '#f9f9f9',
+            borderRadius: '10px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            marginTop: '20px',
+            textAlign: 'center',
+            padding: '20px',
+          }}
+        >
+          <p style={{ fontSize: '18px', color: '#555' }}>
+            No workout data found. Enter your workouts to see your statistics.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+
   // Prepare data for the bar chart
   const barChartData = {
     labels: workouts.map(workout => new Date(workout.date).toLocaleDateString()), // Dates as labels
