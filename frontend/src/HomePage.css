@@ -1,28 +1,28 @@
+/* General Page Styles */
 .homepage {
   margin: 0;
   padding: 0;
-  background-image: url('https://img.freepik.com/premium-photo/illustration-fitness-equipments-design-background_916191-36199.jpg');
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSypM5KYd47oP4y64M-uk2AuRenrcddb5CvEA&s");
   background-size: cover;
-  background-position: center;
-  min-height: 100vh; /* Set a minimum height to ensure background covers the entire page */
+  min-height: 100vh; /* Ensures background covers the entire page */
   display: flex;
   flex-direction: column;
-  
   align-items: center;
   position: relative;
+  box-sizing: border-box;
 }
 
-/* Navbar styles */
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.808);
+  background: black;
   padding: 10px 20px;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100; /* Ensure the navbar stays on top of all other content */
+  z-index: 100; /* Ensures the navbar stays on top of all other content */
   height: 100px;
 }
 
@@ -31,7 +31,7 @@
   padding-top: 120px; /* Adjust based on the height of the navbar */
 }
 
-/* Logo styling */
+/* Logo Styling */
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -49,7 +49,7 @@
   margin: 0;
 }
 
-/* Links styling */
+/* Links Styling */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -70,12 +70,12 @@
   color: #0056b3;
 }
 
-/* Section container */
+/* Section Container */
 .section {
   width: 80%;
   max-width: 1200px;
   padding: 50px 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   border-radius: 10px;
   margin: 20px auto;
   color: #333;
@@ -87,7 +87,143 @@
   color: #333;
 }
 
-.about-section, .contact-section {
+/* Home Section */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+  padding: 50px 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px auto;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
+}
+
+.home-section:hover {
+  background-color: rgba(255, 255, 255, 1); /* Background color on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+/* About Section */
+.about-section {
   padding: 50px 20px;
   color: #333;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
+}
+
+.about-section:hover {
+  background-color: rgba(255, 255, 255, 1); /* No change in background color on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Image Styling */
+.home-image {
+  flex: 1;
+}
+
+.exercise-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Typing Animation */
+.animated-text {
+  flex: 2;
+  padding-left: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.animated-text h2, .animated-text p {
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  animation: typing 3.5s steps(30, end); /* Removed caret animation */
+}
+
+.animated-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Carousel Container Styling */
+.carousel .slide img {
+  max-width: 80%;
+  max-height: 450px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Optional: Control the size of the carousel itself */
+.carousel-root {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Optional: Add space between carousel items */
+.carousel .thumb {
+  margin: 10px;
+}
+
+/* Footer Styling */
+.footer {
+  width: 100%; /* Full-width footer */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-content {
+  margin-bottom: 1rem;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+.footer-content h2 {
+  color: #fff; /* Ensures h2 text in the footer is white */
+}
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-link {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #00aced; /* Example hover color */
 }
