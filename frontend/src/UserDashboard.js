@@ -79,7 +79,7 @@ const UserDashboard = () => {
           Workouts
         </button>
         <button onClick={() => handleTabChange('dietPlan')} className={activeTab === 'dietPlan' ? 'active' : ''}>
-          Diet Plan
+          Nutritional Analysis
         </button>
         <button onClick={() => handleTabChange('tutorials')} className={activeTab === 'tutorials' ? 'active' : ''}>
           Tutorials

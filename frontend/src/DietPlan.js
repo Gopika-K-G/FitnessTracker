@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
 
 function DietPlan({ username }) {
     const [searchTerm, setSearchTerm] = useState('');
@@ -55,33 +54,6 @@ function DietPlan({ username }) {
             fetchRecommendations();
         }
     }, [activeLevel, fitnessGoal, fetchRecommendations]);
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        rows: 3,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    rows: 2,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    rows: 2,
-                }
-            }
-        ]
-    };
 
     return (
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px', fontFamily: 'Arial, sans-serif' }}>
@@ -180,7 +152,7 @@ function DietPlan({ username }) {
                         <option value="Very Active">Very Active</option>
                     </select>
                 </label>
-                
+
                 <label style={{ display: 'block', marginBottom: '20px', color: '#34495e' }}>
                     Fitness Goal:
                     <select
@@ -203,23 +175,20 @@ function DietPlan({ username }) {
                 </label>
 
                 {recommendations.length > 0 ? (
-                    <Slider {...settings}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
                         {recommendations.map((food) => (
-                            <div key={food.food_code} style={{
-                                border: '1px solid #ddd',
-                                textAlign: 'center',
-                                padding: '15px',
-                                backgroundColor: '#fff',
-                                borderRadius: '8px',
-                                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                                margin: '10px',
-                                height: '180px',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'space-between',
-                                marginBottom: '40px' // Adds spacing between rows
-                            }}>
-                                <h4 style={{ color: '#2980b9', fontSize: '1rem', marginBottom: '5px' }}>{food.food_name}</h4>
+                            <div
+                                key={food.food_code}
+                                style={{
+                                    width: 'calc(25% - 20px)', // 4 cards per row with spacing
+                                    border: '1px solid #ddd',
+                                    padding: '15px',
+                                    backgroundColor: '#fff',
+                                    borderRadius: '8px',
+                                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                                }}
+                            >
+                                <h4 style={{ color: '#2980b9', fontSize: '1rem' }}>{food.food_name}</h4>
                                 <div style={{ fontSize: '0.9rem', color: '#34495e' }}>
                                     <p><strong>Protein:</strong> {food.protein_category}</p>
                                     <p><strong>Carbs:</strong> {food.carb_category}</p>
@@ -227,7 +196,7 @@ function DietPlan({ username }) {
                                 </div>
                             </div>
                         ))}
-                    </Slider>
+                    </div>
                 ) : (
                     <p style={{ color: '#e74c3c' }}>No recommendations available. Please select activity level and fitness goal.</p>
                 )}

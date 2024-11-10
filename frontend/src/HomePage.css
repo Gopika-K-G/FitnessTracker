@@ -186,6 +186,12 @@
   margin: 10px;
 }
 
+/* Remove hover effect from carousel legend with !important */
+.carousel .legend {
+  pointer-events: none !important;  /* Disable hover interaction */
+  cursor: default !important;  /* Ensure no cursor change */
+}
+
 /* Footer Styling */
 .footer {
   width: 100%; /* Full-width footer */

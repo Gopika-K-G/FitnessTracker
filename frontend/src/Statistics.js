@@ -27,7 +27,7 @@ const Statistics = ({ username }) => {
 
         setLoading(false);
       } catch (err) {
-        setError('Error fetching workouts');
+        setError('No workouts found.Enter your workouts to see your stats.');
         setLoading(false);
       }
     };
