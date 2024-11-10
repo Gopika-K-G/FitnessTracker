@@ -112,15 +112,16 @@ function DietPlan({ username }) {
                     ))}
                 </div>
                 {selectedFood && (
-                    <div style={{ marginTop: '20px', textAlign: 'left' }}>
-                        <h4 style={{ color: '#16a085' }}>Nutrition Information for {selectedFood.food_name}</h4>
-                        <p><strong>Energy (kJ):</strong> {selectedFood.energy_kj}</p>
-                        <p><strong>Energy (kcal):</strong> {selectedFood.energy_kcal}</p>
-                        <p><strong>Carbohydrates (g):</strong> {selectedFood.carb_g}</p>
-                        <p><strong>Protein (g):</strong> {selectedFood.protein_g}</p>
-                        <p><strong>Fat (g):</strong> {selectedFood.fat_g}</p>
-                    </div>
-                )}
+                 <div style={{ marginTop: '20px', textAlign: 'left' }}>
+                 <h4 style={{ color: '#16a085' }}>Nutrition Information for {selectedFood.food_name}</h4>
+                 <p><strong>Energy (kJ):</strong> {selectedFood.energy_kj ? selectedFood.energy_kj.toFixed(3) : selectedFood.energy_kj}</p>
+                 <p><strong>Energy (kcal):</strong> {selectedFood.energy_kcal ? selectedFood.energy_kcal.toFixed(3) : selectedFood.energy_kcal}</p>
+                 <p><strong>Carbohydrates (g):</strong> {selectedFood.carb_g ? selectedFood.carb_g.toFixed(3) : selectedFood.carb_g}</p>
+                 <p><strong>Protein (g):</strong> {selectedFood.protein_g ? selectedFood.protein_g.toFixed(3) : selectedFood.protein_g}</p>
+                 <p><strong>Fat (g):</strong> {selectedFood.fat_g ? selectedFood.fat_g.toFixed(3) : selectedFood.fat_g}</p>
+               </div>
+              )}
+
             </div>
 
             {/* Food Recommendation Section */}
