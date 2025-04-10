@@ -10,6 +10,7 @@ const MONGO_URI = process.env.MONGODB_URI || 'mongodb+srv://Gopika:Gopi%40mongo0
 
 // Middleware
 app.use(cors());
+app.options('*', cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
